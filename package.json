@@ -1,6 +1,6 @@
 {
   "name": "bikeday",
-  "description": "Verturilo pathfinder",
+  "description": "Veturilo pathfinder",
   "version": "0.0.1",
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "Warsaw"
   ],
   "scripts": {
-    "start": "node app.js",
+    "start": "grunt server",
     "test": "grunt"
   },
   "devDependencies": {

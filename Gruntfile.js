@@ -58,12 +58,12 @@ module.exports = function(grunt) {
       },
       myTarget: {
         files: {
-          'index.html': 'index.html.tpl'
+          'index.html': '_index.html'
         }
       }
     },
     watch: {
-      files: ['<%= jshint.files %>', 'src/**/*.*', '**/*.*.tpl'],
+      files: ['<%= jshint.files %>', 'src/**/*.*', '**/_*.html'],
       tasks: ['jshint', 'cssmin', 'concat', 'includeSource']
     }
   });
