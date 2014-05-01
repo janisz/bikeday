@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     cssmin: {
       add_banner: {
         options: {
-          banner: '/* My minified css file */'
+          banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
         files: {
           'dist/<%= pkg.name %>.css': ['src/**/*.css']
@@ -19,6 +19,14 @@ module.exports = function(grunt) {
       dist: {
         src: ['src/**/*.js'],
         dest: 'dist/<%= pkg.name %>.js'
+      }
+    },
+    connect: {
+      'static': {
+        options: {
+          hostname: 'localhost',
+          port: 8001
+        }
       }
     },
     uglify: {
@@ -55,20 +63,21 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['<%= jshint.files %>'],
+      files: ['<%= jshint.files %>', 'src/**/*.*', '**/*.*.tpl'],
       tasks: ['jshint', 'cssmin', 'concat', 'includeSource']
     }
   });
 
-grunt.loadNpmTasks('grunt-contrib-uglify');
-grunt.loadNpmTasks('grunt-contrib-jshint');
-grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-contrib-concat');
-grunt.loadNpmTasks('grunt-contrib-cssmin');
-grunt.loadNpmTasks('grunt-include-source');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-include-source');
 
-grunt.registerTask('test', ['jshint']);
-
-grunt.registerTask('default', ['jshint', 'cssmin', 'concat', 'uglify', 'includeSource']);
+  grunt.registerTask('test', ['jshint']);
+  grunt.registerTask('server', ['connect', 'watch']);
+  grunt.registerTask('default', ['jshint', 'cssmin', 'concat', 'uglify', 'includeSource']);
 
 };
