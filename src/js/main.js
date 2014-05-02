@@ -1,9 +1,11 @@
 $(document).ready(function () {
 
-    $('.results').hide();
-    $('#hour').val((new Date().getHours() + 1)%24);
+    var hour = new Date();
+    hour.setMinutes (hour.getMinutes() + 30);
+    hour.setMinutes (0);
+
     $('#searchButton').click(function () {
-            weather($('#hour').val(), 2, function(result)
+            weather(hour.getHours(), 2, function(result)
             {
                 console.log(result);
                 endHour = result.endHour;
