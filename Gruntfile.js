@@ -91,6 +91,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-include-source');
   grunt.loadNpmTasks('grunt-simple-mocha');
+  grunt.loadNpmTasks('grunt-bump');
 
   grunt.registerTask('test', ['jshint', 'simplemocha:spec']);
   grunt.registerTask('test_min', ['jshint', 'simplemocha:all']);
