@@ -1,7 +1,7 @@
 {
   "name": "bikeday",
   "description": "Veturilo pathfinder",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/janisz/bikeday.git"
@@ -34,7 +34,8 @@
     "jquery": "~2.1.1",
     "jsdom": "~0.10.5",
     "sinon": "~1.9.1",
-    "grunt-bump": "0.0.13"
+    "grunt-bump": "0.0.13",
+    "grunt-replace": "~0.7.7"
   },
   "engines": {
     "node": ">= 0.6.0"
