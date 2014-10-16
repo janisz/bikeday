@@ -1,8 +1,9 @@
-![logo](https://raw.githubusercontent.com/janisz/bikeday/master/img/logo.png) bikeday
+![logo](https://github.com/janisz/bikeday/blob/gh-pages/img/bike.png) bikeday
 =======
 [![dependencies](https://david-dm.org/janisz/bikeday.png)](https://david-dm.org/janisz/bikeday)
 [![Build Status](https://travis-ci.org/janisz/bikeday.svg?branch=master)](https://travis-ci.org/janisz/bikeday)
 [![GitHub version](https://badge.fury.io/gh/janisz%2Fbikeday.svg)](http://badge.fury.io/gh/janisz%2Fbikeday)
+[![status](https://sourcegraph.com/api/repos/github.com/janisz/bikeday/.badges/status.png)](https://sourcegraph.com/github.com/janisz/bikeday)
 ###Run application
 
 1. Checkout code `git clone https://github.com/janisz/bikeday.git`
