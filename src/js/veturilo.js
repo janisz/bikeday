@@ -1,7 +1,7 @@
 function findStations(callback) {
   $.ajax({
     type: 'GET',
-    url: 'http://nextbike.net/maps/nextbike-official.xml?city=210',
+    url: 'https://nextbike.net/maps/nextbike-official.xml?city=210',
     dataType: 'xml',
     success: function (xml) {
       var stations = [];
