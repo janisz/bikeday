@@ -1,5 +1,5 @@
 function weather(startHour, hoursOnARoad, callback) {
-  $.ajax({ url: "http://api.wunderground.com/api/086afffe3fa8ba4d/hourly/q/Poland/Warsaw.json",
+  $.ajax({ url: "https://api.wunderground.com/api/086afffe3fa8ba4d/hourly/q/Poland/Warsaw.json",
     dataType: "jsonp",
     success: function (parsed_json) {
       var conditions = [
@@ -41,7 +41,7 @@ function weather(startHour, hoursOnARoad, callback) {
 
 function sunsetSunrise(endHour, callback) {
   $.ajax({
-    url: "http://api.wunderground.com/api/086afffe3fa8ba4d/astronomy/q/Poland/Warsaw.json",
+    url: "https://api.wunderground.com/api/086afffe3fa8ba4d/astronomy/q/Poland/Warsaw.json",
     dataType: "jsonp",
     success: function (parsed_json) {
       var result = {
